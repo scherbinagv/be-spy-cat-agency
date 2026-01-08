@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "c25cbfcb-2076-4f90-88a0-d9d2af90f1f2",
+		"name": "Spy Cat Agency API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "136223"
+	},
+	"item": [
+		{
+			"name": "Get all cats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/cats/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE cat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"James\",\n  \"years_of_experience\": 5,\n  \"breed\": \"Bengal\",\n  \"salary\": 5000\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/cats/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET cat by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/cats/3/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cats",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE salary",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"salary\": 6500\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/cats/2/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cats",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE cat",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/cats/2/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cats",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE mission with targets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"targets\": [\n    { \"name\": \"Target A\", \"country\": \"FR\", \"notes\": \"\" },\n    { \"name\": \"Target B\", \"country\": \"DE\", \"notes\": \"\" }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/missions/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"missions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ASSIGN cat to mission",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cat_id\": 3\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/missions/3/assign_cat/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"missions",
+						"3",
+						"assign_cat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE target notes",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"notes\": \"Observed suspicious behavior\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/targets/1/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"targets",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
